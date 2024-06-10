@@ -1,0 +1,229 @@
+<template>
+  <!--Todo : A intégrer à la fin : -->
+
+  <link rel="stylesheet" href="https://use.typekit.net/ekn5xco.css">
+
+  <div class="container" id="header">
+    <div class="navbar">
+      <ul>
+        <li><a href="#skills">.skills()</a></li>
+        <li><a href="#projects">.projects()</a></li>
+        <li><a href="#header" id="title">Vadim2k.dev</a></li>
+        <li><a href="#blog">.blog()</a></li>
+        <li><a href="#contact">.contact()</a></li>
+      </ul>
+    </div>
+
+    <div class="title">
+      <h1>Vadim Khenfer</h1>
+      <h2>Etudiant en B.U.T MMI : parcours <br><span>developpement web & dispositifs interactifs.</span></h2>
+    </div>
+
+    <img src="./assets/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
+
+    <a href="#project_container">
+    <div id="cta_circle">
+        <img src="./assets/svg/arrow_down.svg" alt="Flèche vers le bas">
+    </div>
+    </a>
+  
+  
+  </div>
+
+  <div class="vertical_slider">
+      <div class="text_wrapper">
+        <p>Portfolio 2024</p>
+        <p>Portfolio 2024</p>
+      </div>
+  </div>
+
+  <ProjectContainer/>
+  <CtaContainer/>
+
+</template>
+
+<script>
+import ProjectContainer from './components/ProjectContainer.vue'
+import CtaContainer from './components/CtaContainer.vue'
+
+export default {
+  name: 'App',
+  components: {
+    ProjectContainer,
+    CtaContainer,
+  }
+}
+</script>
+
+<style lang="scss">
+
+@import './assets/sass/vars.scss';
+@import "https://use.typekit.net/ekn5xco.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+  .container{
+    padding: 0 $init_padding;
+    font-family: gloridot, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  //Loading screen :
+  #loading_screen{
+  height: 100vh;
+  .title{
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      text-align: center; 
+      transform: translate(-50%, -50%);    
+
+      //Title:
+      h1{
+        color: $primary_color;
+        font-size: 3rem;
+      }
+      //Loading description :
+      p{
+        color: $tertiary_color;
+        font-size: 95px;
+      }
+    }
+  }
+
+  //Header:
+  #header{
+    background-color: black;
+    background-image: url('./assets/img/noise.png');
+    border-bottom: 1.2vh solid $primary-color;
+    height: 99vh;
+    width: 85vw;
+    position: relative;
+
+    .navbar{
+      padding-top: 40px;
+      ul{
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      li{
+        list-style-type: none;
+        font-size: 50px;
+        a{
+          color: $tertiary_color;
+          text-decoration: underline;
+
+        }
+        a#title{
+            font-size: 100px;
+            color: $primary_color;
+            text-decoration: none;
+        }
+      }
+      }
+    }
+    .title{
+      color: $tertiary_color;
+      width: calc(100% * 2/3);
+      position: absolute;
+      top: 55%;
+      transform: translate(0, -50%);    
+
+      h1{
+        font-size: 9.5rem;
+        font-weight: 400;
+        width: 100%;
+      }
+
+      
+      h2{
+        font-size: 3.5rem;
+        font-weight: 400;
+        width: 100%;
+        span:not(.Typewriter__wrapper){
+          color: $primary_color;
+        }
+      }
+    }
+
+    img{
+      background: none;
+      height: auto;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 40%;
+    }
+
+    #cta_circle{
+      background-color: $primary_color;
+      border-radius: 50%;
+      height: 75px;
+      width: 75px;
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      text-align: center; 
+      transform: translate(-50%, -50%);    
+
+     img{
+      top: 52.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+     }
+     &:hover img{
+      transform: translate(-50%, -50%) translateY(3px);
+      transition: 1.0s;
+     }
+    }
+  }
+
+  .vertical_slider{
+      background: none;
+      background-color: $primary_color; 
+      height: 100vh;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: calc(15vw - 2*$init_padding); //Width calculée par rapport au padding du header.
+      .text_wrapper{
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        p{
+          animation: scroll 10s linear infinite; // Applique l'animation de défilement
+          color: $secondary_color;
+          font-family: "gamay-expanded", sans-serif;  
+          font-weight: 700;      
+          font-size: 10rem;
+          left: 40%;
+          letter-spacing: -5px;
+          position: absolute;
+          top: 100%;
+          text-align: center; 
+          text-transform: uppercase;
+          text-wrap: nowrap;
+          transform: translate(-50%, -50%) rotate(90deg);    
+          overflow: hidden;
+
+        }
+      }
+    }
+
+    // Animation de défilement
+    @keyframes scroll {
+  0% {
+    top: 200%;
+  }
+  100% {
+    top: -90%;
+  }
+}
+</style>

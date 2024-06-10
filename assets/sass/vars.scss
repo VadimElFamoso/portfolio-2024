@@ -1,0 +1,16 @@
+$primary_color: #F199C5;
+$secondary_color: #000000;
+$tertiary_color: #F1F2EE;
+$fourth_color: #100F0F;
+
+$init_padding: 50px;
+
+//Breakpoints :
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
