@@ -30,7 +30,7 @@ export default {
         display: flex;
         height: 25vh;
         justify-content: center;
-        padding: 0 125px;
+        padding: 25px 125px;
 
         .cta_info{
             color: $tertiary_color;
@@ -73,7 +73,7 @@ export default {
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                width: 80%;
+                width: 100%;
             }
         }
     }

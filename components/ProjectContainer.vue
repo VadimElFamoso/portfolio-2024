@@ -12,12 +12,12 @@
   
       <div class="projects">
         <div class="project_wrapper">
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_description="Voici notre projet"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_description="Voici notre projet"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_description="Voici notre projet"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_description="Voici notre projet"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_description="Voici notre projet"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_description="Voici notre projet"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
 
 
         </div>

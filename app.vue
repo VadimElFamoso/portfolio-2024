@@ -39,18 +39,21 @@
 
   <ProjectContainer/>
   <CtaContainer/>
+  <Footer/>
 
 </template>
 
 <script>
 import ProjectContainer from './components/ProjectContainer.vue'
 import CtaContainer from './components/CtaContainer.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     ProjectContainer,
     CtaContainer,
+    Footer
   }
 }
 </script>

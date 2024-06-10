@@ -5,7 +5,7 @@
       <div class="project_info_wrapper">
         <h2>{{ project_title }}</h2>
         <span>{{ project_date }}</span>
-        <p>{{ project_description }}</p>
+        <p>{{ project_category }}</p>
       </div>
       <a href="">En savoir plus.</a>
     </div>
@@ -25,7 +25,7 @@ export default {
       required: false,
       default: ''
     },
-    project_description: {
+    project_category: {
       type: String,
       required: false,
       default: ''
@@ -81,7 +81,8 @@ export default {
         }
 
         span{
-          font-family: "gamay", sans-serif;  
+          font-family: "gamay-wide", sans-serif; 
+          letter-spacing: 10px; 
           font-weight: 100;  
           font-style: italic;  
         }
