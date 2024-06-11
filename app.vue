@@ -27,14 +27,8 @@
     </div>
     </a>
   
+    <h3 class="background_text">Portfolio 2024 made with <3</h3>
   
-  </div>
-
-  <div class="vertical_slider">
-      <div class="text_wrapper">
-        <p>Portfolio 2024</p>
-        <p>Portfolio 2024</p>
-      </div>
   </div>
 
   <ProjectContainer/>
@@ -70,7 +64,7 @@ export default {
 }
 
   .container{
-    padding: 0 $init_padding;
+    // padding: 0 $init_padding;
     font-family: gloridot, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -104,8 +98,8 @@ export default {
     background-color: black;
     background-image: url('./assets/img/noise.png');
     border-bottom: 1.2vh solid $primary-color;
-    height: 99vh;
-    width: 85vw;
+    height: 98.8vh;
+    padding: 0 $init_padding;
     position: relative;
 
     .navbar{
@@ -160,7 +154,7 @@ export default {
       position: absolute;
       right: 0;
       bottom: 0;
-      width: 40%;
+      width: 38%; 
     }
 
     #cta_circle{
@@ -187,43 +181,56 @@ export default {
     }
   }
 
-  .vertical_slider{
-      background: none;
-      background-color: $primary_color; 
-      height: 100vh;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: calc(15vw - 2*$init_padding); //Width calculée par rapport au padding du header.
-      .text_wrapper{
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        p{
-          animation: scroll 10s linear infinite; // Applique l'animation de défilement
-          color: $secondary_color;
-          font-family: "gamay-expanded", sans-serif;  
-          font-weight: 700;      
-          font-size: 10rem;
-          left: 40%;
-          letter-spacing: -5px;
-          position: absolute;
-          top: 100%;
-          text-align: center; 
-          text-transform: uppercase;
-          text-wrap: nowrap;
-          transform: translate(-50%, -50%) rotate(90deg);    
-          overflow: hidden;
+  .background_text{
+    color: $primary_color;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 400;
+    position: absolute;
+    text-decoration: underline;
+    bottom: 5px;
+    left: 5px;
+    // opacity: 0.05;
+    text-align: center;
+  }
 
-        }
-      }
-    }
+  // .vertical_slider{
+  //     background: none;
+  //     background-color: $primary_color; 
+  //     height: 100vh;
+  //     position: absolute;
+  //     right: 0;
+  //     top: 0;
+  //     width: calc(15vw - 2*$init_padding); //Width calculée par rapport au padding du header.
+  //     .text_wrapper{
+  //       height: 100%;
+  //       overflow: hidden;
+  //       position: relative;
+  //       width: 100%;
+  //       p{
+  //         animation: scroll 10s linear infinite; // Applique l'animation de défilement
+  //         color: $secondary_color;
+  //         font-family: "gamay-expanded", sans-serif;  
+  //         font-weight: 700;      
+  //         font-size: 10rem;
+  //         left: 40%;
+  //         letter-spacing: -5px;
+  //         position: absolute;
+  //         top: 100%;
+  //         text-align: center; 
+  //         text-transform: uppercase;
+  //         text-wrap: nowrap;
+  //         transform: translate(-50%, -50%) rotate(90deg);    
+  //         overflow: hidden;
+
+  //       }
+  //     }
+  //   }
 
     // Animation de défilement
     @keyframes scroll {
   0% {
-    top: 200%;
+    left: 0;
   }
   100% {
     top: -90%;

@@ -1,14 +1,16 @@
+console.log("Script chargé !");
 import { createApp } from 'vue'
 import App from './App.vue'
 import TypeWriter from 'typewriter-effect/dist/core';
 
 createApp(App).mount('#app')
 
-//Typewritter effect :
+// Typewriter effect
 const tw = new TypeWriter('.title h2', {
     loop: true,
     delay: 75,
-})
+});
+
 tw
 .start()
 .typeString('Etudiant en B.U.T 2A MMI : parcours <span>développement web et dispositifs interactifs.</span>')
@@ -28,5 +30,4 @@ tw
 .deleteAll(25)
 .typeString("Ancien féru <span>d'Arduino...</span>")
 .pauseFor(750)
-.deleteAll(25)
-
+.deleteAll(25);

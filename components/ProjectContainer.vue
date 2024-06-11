@@ -11,13 +11,14 @@
       </div>
   
       <div class="projects">
+        <p class="project_category">Développement web</p>
         <div class="project_wrapper">
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../assets/img/project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../assets/img/project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../img/project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../img/project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../img/project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../img/project.jpg"/>
 
 
         </div>
@@ -48,6 +49,7 @@
         width: 10vw;
 
         ul{
+          border: 2px solid red;
             align-items: center;
             display: flex;
             gap: 10px;
@@ -58,7 +60,7 @@
         }
 
         ul a:first-child::before{
-          content: url('../assets/svg/line.svg');
+          // content: url('../assets/svg/line.svg');
           position: absolute;
           top: 20px;
           left: 20px;
@@ -73,7 +75,24 @@
       .projects{
         background-color: red;
         height: 100vh;
+        position: relative;
         width: 90vw;
+
+        .project_category{
+          border: 2px solid red;
+          color: $tertiary_color;
+          font-family: 'gamay-wide', sans-serif;
+          font-size: 5.5vw;
+          font-weight: 700;
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          opacity: 0.05;
+          text-align: center;
+          text-transform: uppercase;
+          text-wrap: nowrap;
+          width: 100%;
+        }
 
         .project_wrapper{
           background-color: $fourth-color;

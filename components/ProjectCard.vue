@@ -1,6 +1,6 @@
 <template>
   <div class="project_card">
-    <img src="../assets/img/project.jpg" alt="">
+    <img :src="project_image" alt="">
     <div class="project_info">
       <div class="project_info_wrapper">
         <h2>{{ project_title }}</h2>
@@ -29,6 +29,11 @@ export default {
       type: String,
       required: false,
       default: ''
+    },
+    project_image:{
+      type: String,
+      required: true,
+      default: '../assets/img/error.jpg',
     }
   }
 
