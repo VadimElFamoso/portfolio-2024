@@ -30,14 +30,20 @@ export default {
       required: false,
       default: ''
     },
-    project_image:{
+    project_image: {
       type: String,
-      required: true,
-      default: '../assets/img/error.jpg',
+      required: true
+    }
+  },
+  methods:{
+    getImageUrl: function () {
+      return new URL(`../assets/img/${project}`, import.meta.url);
     }
   }
-
 }
+
+
+
 </script>
 
 <style lang="scss">

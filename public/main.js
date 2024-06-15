@@ -2,6 +2,8 @@ console.log("Script chargé !");
 import { createApp } from 'vue'
 import App from './App.vue'
 import TypeWriter from 'typewriter-effect/dist/core';
+import PDFObjectPlugin from 'pdfobject-vue';
+App.use(PDFObjectPlugin);
 
 createApp(App).mount('#app')
 

@@ -27,12 +27,13 @@
     </div>
     </a>
   
-    <h3 class="background_text">Portfolio 2024 made with <3</h3>
+    <h3 class="background_text">Portfolio 2024 made with</h3>
   
   </div>
 
   <ProjectContainer/>
   <CtaContainer/>
+  <SkillsContainer/>
   <Footer/>
 
 </template>
@@ -40,6 +41,7 @@
 <script>
 import ProjectContainer from './components/ProjectContainer.vue'
 import CtaContainer from './components/CtaContainer.vue'
+import SkillsContainer from './components/SkillsContainer.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -47,6 +49,7 @@ export default {
   components: {
     ProjectContainer,
     CtaContainer,
+    SkillsContainer,
     Footer
   }
 }
