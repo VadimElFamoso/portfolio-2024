@@ -49,7 +49,6 @@
         width: 10vw;
 
         ul{
-          border: 2px solid red;
             align-items: center;
             display: flex;
             gap: 10px;
@@ -79,10 +78,9 @@
         width: 90vw;
 
         .project_category{
-          border: 2px solid red;
           color: $tertiary_color;
           font-family: 'gamay-wide', sans-serif;
-          font-size: 5.5vw;
+          font-size:  5.5vw;
           font-weight: 700;
           position: absolute;
           right: 10px;

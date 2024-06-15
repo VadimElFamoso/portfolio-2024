@@ -27,7 +27,7 @@
     </div>
     </a>
   
-    <h3 class="background_text">Portfolio 2024 made with</h3>
+    <h3 class="background_text">Access</h3>
   
   </div>
 
@@ -110,6 +110,8 @@ export default {
       ul{
       align-items: center;
       display: flex;
+      flex-basis: 100%;
+      flex-wrap: wrap;
       justify-content: space-between;
       li{
         list-style-type: none;
