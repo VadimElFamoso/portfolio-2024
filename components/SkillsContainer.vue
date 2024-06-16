@@ -22,7 +22,8 @@
   </div>
 
   <div class="cta_cv">
-    <p>Bonjour</p>
+    <p>Vous voulez en savoir plus ?</p>
+    <button>Consultez mon cv</button>
   </div>
   
 
@@ -88,5 +89,28 @@ export default {
         width: 100%;
       }
     }
+  }
+
+  .cta_cv{
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-family: 'gamay-wide', sans-serif;
+    padding: 100px 25px;
+    text-align: center;
+      p{
+        font-size: 3rem;
+      }
+      button{
+        background-color: $fourth-color;
+        border: none;
+        border-radius: 25px;
+        color: $tertiary-color;
+        display: block;
+        margin: auto;
+        padding: 10px 10px;
+        width: 10%;
+      }
   }
 </style>
