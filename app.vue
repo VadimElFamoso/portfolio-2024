@@ -14,12 +14,14 @@
       </ul>
     </div>
 
-    <div class="title">
-      <h1>Vadim Khenfer</h1>
-      <h2>Etudiant en B.U.T MMI : parcours <br><span>developpement web & dispositifs interactifs.</span></h2>
-    </div>
+    <div class="header_wrapper">
+      <div class="title">
+        <h1>Vadim Khenfer</h1>
+        <h2>Etudiant en B.U.T MMI : parcours <br><span>developpement web & dispositifs interactifs.</span></h2>
+      </div>
 
-    <img src="./assets/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
+      <img src="./assets/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
+    </div>
 
     <a href="#project_container">
     <div id="cta_circle">
@@ -27,7 +29,7 @@
     </div>
     </a>
   
-    <h3 class="background_text">Access</h3>
+    <a href="https://wpengine.com/wp-content/uploads/2017/02/reasonstolovewordpress.jpg" target="_blank" class="background_text">code is poetry</a>
   
   </div>
 
@@ -53,12 +55,16 @@ export default {
     Footer
   }
 }
+
 </script>
 
 <style lang="scss">
 
+@import './assets/sass/mediaqueries.scss';
 @import './assets/sass/vars.scss';
 @import "https://use.typekit.net/ekn5xco.css";
+
+// @import "./assets/sass/mediaqueries.scss";
 
 *{
   margin: 0;
@@ -111,24 +117,24 @@ export default {
       align-items: center;
       display: flex;
       flex-basis: 100%;
-      flex-wrap: wrap;
       justify-content: space-between;
       li{
         list-style-type: none;
-        font-size: 50px;
+        font-size: 3vw;
         a{
           color: $tertiary_color;
           text-decoration: underline;
 
         }
         a#title{
-            font-size: 100px;
+            font-size: 6vw;
             color: $primary_color;
             text-decoration: none;
         }
       }
       }
     }
+    
     .title{
       color: $tertiary_color;
       width: calc(100% * 2/3);
@@ -137,14 +143,14 @@ export default {
       transform: translate(0, -50%);    
 
       h1{
-        font-size: 9.5rem;
+        font-size: 8vw;
         font-weight: 400;
         width: 100%;
       }
 
       
       h2{
-        font-size: 3.5rem;
+        font-size: 3vw;
         font-weight: 400;
         width: 100%;
         span:not(.Typewriter__wrapper){
@@ -163,6 +169,7 @@ export default {
     }
 
     #cta_circle{
+      animation: bounce 2s ease-in-out infinite;
       background-color: $primary_color;
       border-radius: 50%;
       height: 75px;
@@ -179,24 +186,27 @@ export default {
       left: 50%;
       transform: translate(-50%, -50%);
      }
-     &:hover img{
-      transform: translate(-50%, -50%) translateY(3px);
-      transition: 1.0s;
-     }
     }
   }
 
   .background_text{
-    color: $primary_color;
+    color: $tertiary-color;
     font-size: 2rem;
     font-style: italic;
     font-weight: 400;
+    letter-spacing: 4px;
     position: absolute;
-    text-decoration: underline;
+    opacity: 0.1;
+    text-decoration: none;
     bottom: 5px;
     left: 5px;
-    // opacity: 0.05;
     text-align: center;
+
+    &:hover{
+      color: $primary-color;
+      opacity: 0.5;
+      transition: 0.5s;
+    }
   }
 
   // .vertical_slider{
@@ -234,11 +244,17 @@ export default {
 
     // Animation de défilement
     @keyframes scroll {
-  0% {
-    left: 0;
-  }
-  100% {
-    top: -90%;
-  }
-}
+      0% {
+        left: 0;
+      }
+      100% {
+        top: -90%;
+      }
+    }
+
+    @keyframes bounce{
+      0% {transform: translate(-50%, -50%) translateY(-5px);}
+      50% {transform: translate(-50%, -50%) translateY(5px);}
+      100% {transform: translate(-50%, -50%) translateY(-5px);}
+    }
 </style>

@@ -28,6 +28,16 @@
   
   <script>
   import ProjectCard from '../components/ProjectCard.vue';
+
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  // ScrollTrigger.create({
+  //   trigger: '#project_container',
+  //   pin: true,
+  // })
+  
   export default {
       name: 'ProjectContainer',
       components:{

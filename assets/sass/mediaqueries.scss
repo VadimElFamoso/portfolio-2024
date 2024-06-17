@@ -1,0 +1,21 @@
+//Fichier contenant les media queries.
+
+@use "sass:map";
+
+@import './assets/sass/vars.scss';
+@import "./vars.scss";
+
+@media screen and (max-width: map.get($breakpoints, "xl")) {
+    
+}
+
+@media screen and (max-width: map.get($breakpoints, "lg")) {
+    
+}
+
+@media screen and (max-width: map.get($breakpoints, "md")) {
+
+    .header_wrapper img{
+        display: none;
+    }
+}

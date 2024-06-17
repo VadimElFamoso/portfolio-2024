@@ -1,9 +1,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  app:{
-    head:{
+  app: {
+    head: {
       script: [
-        { src: './public/main.js' }
+        { src: '/main.js', type: 'module' }
       ],
     }
   }

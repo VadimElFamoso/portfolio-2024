@@ -50,6 +50,7 @@ export default {
     text-transform: uppercase;
 
     .text_container{
+      border: 2px solid red;
       width: 50%;
 
       .text.active{
@@ -58,7 +59,7 @@ export default {
 
       p{
       display: block;
-      font-size: 5rem;
+      font-size: 4vw;
       }
 
       .text{
@@ -69,7 +70,7 @@ export default {
         display: block;
         font-weight: 400;
         p{
-        font-size: 2rem;
+        font-size: 2vw;
       }
       }
 
@@ -79,6 +80,7 @@ export default {
     }
     
     .resume_container{
+      border: 2px solid red;
       background-color: black;
       height: 100%;
       width: 50%;
