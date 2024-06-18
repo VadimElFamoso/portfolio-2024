@@ -50,7 +50,6 @@ export default {
     text-transform: uppercase;
 
     .text_container{
-      border: 2px solid red;
       width: 50%;
 
       .text.active{
@@ -80,7 +79,6 @@ export default {
     }
     
     .resume_container{
-      border: 2px solid red;
       background-color: black;
       height: 100%;
       width: 50%;

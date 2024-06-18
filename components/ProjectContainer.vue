@@ -13,12 +13,12 @@
       <div class="projects">
         <p class="project_category">Développement web</p>
         <div class="project_wrapper">
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../assets/img/project.jpg"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../assets/img/project.jpg"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../img/project.jpg"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../img/project.jpg"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../img/project.jpg"/>
-          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="../img/project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
 
 
         </div>
@@ -93,13 +93,12 @@
           font-size:  5.5vw;
           font-weight: 700;
           position: absolute;
-          right: 10px;
           bottom: 10px;
           opacity: 0.05;
           text-align: center;
           text-transform: uppercase;
           text-wrap: nowrap;
-          width: 100%;
+          width: 90vw;
         }
 
         .project_wrapper{

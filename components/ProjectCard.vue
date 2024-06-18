@@ -1,6 +1,6 @@
 <template>
   <div class="project_card">
-    <img :src="project_image" alt="">
+    <img :src="imageUrl" alt="">
     <div class="project_info">
       <div class="project_info_wrapper">
         <h2>{{ project_title }}</h2>
@@ -13,6 +13,11 @@
 </template>
 
 <script>
+async function resolveImage(name) {
+  const module = await import(`~/assets/img/${name}`);
+  return module.default;
+}
+
 export default {
     name: 'ProjectCard',
     props: {
@@ -34,10 +39,10 @@ export default {
       type: String,
       required: true
     }
-  },
-  methods:{
-    getImageUrl: function () {
-      return new URL(`../assets/img/${project}`, import.meta.url);
+    },
+    computed: {
+    imageUrl() {
+      return `/img/${this.project_image}`;
     }
   }
 }
