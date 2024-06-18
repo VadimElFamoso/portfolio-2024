@@ -17,13 +17,16 @@
     </div>
 
     <div class="resume_container">
-      <img src="../assets/img/lake.jpg" alt="">
+      <img src="../public/img/lake.jpg" alt="">
     </div>
   </div>
 
   <div class="cta_cv">
     <p>Vous voulez en savoir plus ?</p>
-    <button>Consultez mon cv</button>
+    <div class="cv_container">
+      <a href="/pdf/cv_khenfer_vadim.pdf">Télécharger mon cv</a>
+      <a href="/pdf/resume_khenfer_vadim.pdf">Download my resume</a>
+    </div>
   </div>
   
 
@@ -97,20 +100,43 @@ export default {
     flex-direction: column;
     gap: 25px;
     font-family: 'gamay-wide', sans-serif;
-    padding: 100px 25px;
+    padding: 100px 0;
     text-align: center;
+    &::before{
+          content: url("../public/devider.svg");
+        }
       p{
-        font-size: 3rem;
-      }
-      button{
-        background-color: $fourth-color;
-        border: none;
-        border-radius: 25px;
-        color: $tertiary-color;
+        border: 2px solid red;
+        font-size: 4vw;
+        font-weight: 700;
         display: block;
         margin: auto;
-        padding: 10px 10px;
-        width: 10%;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        width: 75%;
       }
+      .cv_container{
+        border: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: auto;
+        width: 50%;
+
+        a{
+        background-color: $fourth-color;
+        border: none;
+        border-radius: 50px;
+        color: $tertiary-color;
+        display: block;
+        font-size: 1.5vw;
+        font-family: 'gamay'; 
+        font-weight: 100;
+        margin: auto;
+        padding: 25px 25px;
+        text-decoration: none;
+        width: 30%;
+      }
+    }
   }
 </style>

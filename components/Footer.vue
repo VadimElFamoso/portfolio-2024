@@ -3,7 +3,7 @@
     <div class="footer">
         <div class="text_wrapper">
           <div class="text_container">
-            <h2>Portfolio 2024 x<img src="../assets/img/logo_codecorp.png" alt="Logo CodeCorp"></h2> 
+            <h2>Portfolio 2024 x<img src="../public/img/logo_codecorp.png" alt="Logo CodeCorp"></h2> 
             <p></p>
           </div>
           <div class="nav_container">
@@ -35,7 +35,7 @@ export default {
 @import './assets/sass/vars.scss';
     .footer{
         background-color: black;
-        background-image: url('../assets/img/noise.png');
+        background-image: url('../public/img/noise.png');
         position: relative;
 
         .text_wrapper{

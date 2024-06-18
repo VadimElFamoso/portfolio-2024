@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="cta_img">
-        <img src="../assets/img/logo_codecorp.png" alt="Logo de CodeCorp">
+        <img src="../public/img/logo_codecorp.png" alt="Logo de CodeCorp">
     </div>
   </div>
 </template>
@@ -33,6 +33,7 @@ export default {
         padding: 25px 125px;
 
         .cta_info{
+            border: 2px solid red;
             color: $tertiary_color;
             display: flex;
             gap: 10px;
@@ -51,7 +52,7 @@ export default {
             }
 
             p{
-              font-size: 3rem;  
+              font-size: 3vw; 
               font-family: "gamay-expanded", sans-serif;  
               font-weight: 700;      
               text-transform: uppercase;    

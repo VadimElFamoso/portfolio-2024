@@ -56,20 +56,22 @@ export default {
 @import '../assets/sass/vars.scss';
 
     .project_card{
-        display: flex;
+        border: 2px solid red;
+        display: flex;     
         flex-direction: column;
         //gap:
-        height: calc(50% - 25px);
-        width: calc(33% - 30px);
+        height: fit-content;
+        width: calc(33% - 25px);
 
         img{
+          height: auto;
           width: 100%;
         }
 
       .project_info{
         align-items: center;
         background-color: $fourth_color;
-        border-radius: 0 0 25px 25px;
+        // border-radius: 0 0 25px 25px;
         color: $tertiary_color;
         padding: 10px 10px;
         display: flex;

@@ -20,7 +20,7 @@
         <h2>Etudiant en B.U.T MMI : parcours <br><span>developpement web & dispositifs interactifs.</span></h2>
       </div>
 
-      <img src="./assets/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
+      <img src="./public/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
     </div>
 
     <a href="#project_container">
@@ -105,7 +105,7 @@ export default {
   //Header:
   #header{
     background-color: black;
-    background-image: url('./assets/img/noise.png');
+    background-image: url('./public/img/noise.png');
     border-bottom: 1.2vh solid $primary-color;
     height: 98.8vh;
     padding: 0 $init_padding;
@@ -124,7 +124,10 @@ export default {
         a{
           color: $tertiary_color;
           text-decoration: underline;
-
+          &:hover{
+            color: $primary-color;
+            transition: 1.0s;
+          }
         }
         a#title{
             font-size: 6vw;
