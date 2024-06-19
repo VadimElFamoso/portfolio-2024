@@ -42,6 +42,7 @@ export default {
           align-items: center;
           color: $tertiary-color;
           display: flex;
+          flex-direction: column;
           flex-wrap: wrap;
           height: inherit;
           justify-content: space-around;

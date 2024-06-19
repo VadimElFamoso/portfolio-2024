@@ -19,8 +19,6 @@
           <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
           <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
           <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
-
-
         </div>
       </div>
     </div>
@@ -48,7 +46,6 @@
   
   <style lang="scss">
   @import '../assets/sass/vars.scss';
-  
   #project_container {
       display: flex;
       height: 100vh;
@@ -82,7 +79,7 @@
       }
       //
       .projects{
-        background-color: red;
+        background-color: $fourth-color;
         height: 100vh;
         position: relative;
         width: 90vw;
@@ -108,8 +105,39 @@
           gap: 25px;
           justify-content: center;
           padding: 25px;
-          height: calc(100vh - 50px);
+          position: relative;
           width: calc(90vw - 50px);
+
+
+            .nav_left{
+              background-color: $primary_color;
+              height: 50px;
+              position: absolute;
+              top: 50%;
+              left: calc(2vw + 50px); //Gestion du padding
+              transform: translate(-50%, -50%);
+              width: 50px;
+
+              img{
+              height: auto;
+              width: 1%;
+            }
+            }
+            .nav_right{
+              background-color: $primary_color;
+              height: 50px;
+              position: absolute;
+              top: 50%;
+              right: calc(2vw);
+              transform: translate(-50%, -50%);
+              width: 50px;
+
+              img{
+              height: auto;
+              width: 1.5%;
+            }
+            }
+
         }
       }
   }

@@ -17,7 +17,7 @@
     <div class="header_wrapper">
       <div class="title">
         <h1>Vadim Khenfer</h1>
-        <h2>Etudiant en B.U.T MMI : parcours <br><span>developpement web & dispositifs interactifs.</span></h2>
+        <VueWriter :array="['Développeur web <span>pasffdddsionné.</span>']" />
       </div>
 
       <img src="./public/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
@@ -35,6 +35,7 @@
 
   <ProjectContainer/>
   <CtaContainer/>
+  <BlogContainer/>
   <SkillsContainer/>
   <Footer/>
 
@@ -44,7 +45,10 @@
 import ProjectContainer from './components/ProjectContainer.vue'
 import CtaContainer from './components/CtaContainer.vue'
 import SkillsContainer from './components/SkillsContainer.vue'
+import BlogContainer from './components/BlogContainer.vue'
 import Footer from './components/Footer.vue'
+
+import {VueWriter} from 'vue-writer'
 
 export default {
   name: 'App',
@@ -52,7 +56,9 @@ export default {
     ProjectContainer,
     CtaContainer,
     SkillsContainer,
-    Footer
+    BlogContainer,
+    Footer,
+    VueWriter
   }
 }
 
@@ -91,14 +97,13 @@ export default {
 
       //Title:
       h1{
-        color: $primary_color;
+        color: red;
         font-size: 3rem;
       }
       //Loading description :
-      p{
-        color: $tertiary_color;
-        font-size: 95px;
-      }
+      .is-typed span.typed {
+        background-color: orange;
+      } 
     }
   }
 
