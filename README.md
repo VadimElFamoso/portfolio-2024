@@ -1,5 +1,9 @@
-- [] CV_container
-- [] CV anglais
+- [x] CV_container
+- [] Intégrer CV anglais
 - [] Responsive
-- [] Wordpress headless blog (Netlify free plan)
+- [] BP ou vw ?
+- [x] Wordpress headless blog
+- [] Styliser module de blog
+- [] Page blog avec post_id
+- [] SVG divider
 - [] Hébergement nouveau domaine
