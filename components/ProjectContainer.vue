@@ -40,8 +40,26 @@
       name: 'ProjectContainer',
       components:{
         ProjectCard
+      },
+      mounted(){
+        this.projectsScrolltrigger();
+      },
+      methods:{
+        projectsScrolltrigger(){
+
+          console.log("scroll");
+
+        ScrollTrigger.create({
+          trigger: '#project_container',
+          start: 'top top',
+          end: 'bottom bottom',
+          markers: true,
+          pin: true,
+          scrub: 1,
+        })
       }
-  }
+    }  
+  } 
   </script>
   
   <style lang="scss">

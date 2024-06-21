@@ -17,7 +17,7 @@
     <div class="header_wrapper">
       <div class="title">
         <h1>Vadim Khenfer</h1>
-        <VueWriter :array="['Développeur web <span>pasffdddsionné.</span>']" />
+        <VueWriter :array="['Développeur web passionné.']" />
       </div>
 
       <img src="./public/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
@@ -59,9 +59,53 @@ export default {
     BlogContainer,
     Footer,
     VueWriter
+  },
+  mounted() {
+    this.animateTitle();
+  },
+  methods: {
+  animateTitle() {
+    const title = document.querySelector("#title");
+    if (title) {
+      const text = title.innerText;
+      title.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
+
+      const letters = title.querySelectorAll('span');
+      const animationInterval = 110; // Time between each letter change
+      const pauseTime = 2000; // Pause time at the end of the animation
+
+      let currentIndex = 0;
+
+      const animationLoop = () => {
+        letters.forEach((letter, index) => {
+          if (index === currentIndex) {
+            letter.classList.add('highlight');
+          } else {
+            letter.classList.remove('highlight');
+          }
+        });
+
+        currentIndex++;
+
+        if (currentIndex <= letters.length) {
+          setTimeout(animationLoop, animationInterval);
+        } 
+        else {
+          // Reset currentIndex to 0 before starting the animation loop again
+          currentIndex = 0;
+
+          setTimeout(animationLoop, pauseTime);
+        }
+      };
+
+      // Start animation loop initially
+      animationLoop();
+    }
   }
 }
 
+
+}
 </script>
 
 <style lang="scss">
@@ -98,21 +142,23 @@ export default {
       //Title:
       h1{
         color: red;
-        font-size: 3rem;
+        font-size: 5rem;
       }
-      //Loading description :
-      .is-typed span.typed {
-        background-color: orange;
-      } 
     }
   }
+
+  //Loading description :
+  .is-typed span.typed {
+    color: $primary-color;
+    font-size: 3.5rem;
+  } 
 
   //Header:
   #header{
     background-color: black;
     background-image: url('./public/img/noise.png');
     border-bottom: 1.2vh solid $primary-color;
-    height: 98.8vh;
+    height: calc(100vh - 1.2vh); //100vh - border_bottom
     padding: 0 $init_padding;
     position: relative;
 
@@ -138,6 +184,10 @@ export default {
             font-size: 6vw;
             color: $primary_color;
             text-decoration: none;
+
+          span.highlight{
+            color: $tertiary_color;
+          }
         }
       }
       }
@@ -168,12 +218,12 @@ export default {
     }
 
     img{
-      background: none;
       height: auto;
       position: absolute;
-      right: 0;
+      right: 10%;
       bottom: 0;
-      width: 38%; 
+      width: 27.5%; 
+
     }
 
     #cta_circle{
