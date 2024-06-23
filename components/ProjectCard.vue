@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss">
 
-@import '../assets/sass/vars.scss';
+@import '../public/sass/vars.scss';
 
     .project_card{
       border: 2px solid red;

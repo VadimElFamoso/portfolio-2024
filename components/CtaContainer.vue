@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../assets/sass/vars.scss';
+@import '../public/sass/vars.scss';
 
 
     .cta_container{

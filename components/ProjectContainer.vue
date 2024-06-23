@@ -3,10 +3,10 @@
       <!--Todo: Transformer la vertical navbar en composant-->
       <div class="vertical_navbar">
         <ul>
-            <a href="https://x.com/Vadim_dev" target="_blank"><img src="../assets/svg/x.svg" alt="Logo de X (Twitter)"></a>
-            <a href="https://discord.gg/TV6cp2erT5" target="_blank"><img src="../assets/svg/discord.svg" alt="Logo de Discord"></a>
-            <a href="https://github.com/VadimElFamoso" target="_blank"><img src="../assets/svg/github.svg" alt="Logo de Github"></a>
-            <a href="mailto:contact@vadim2k.dev" target="_blank"><img src="../assets/svg/mail.svg" alt="Logo boîte mail"></a>
+            <a href="https://x.com/Vadim_dev" target="_blank"><img src="../public/svg/x.svg" alt="Logo de X (Twitter)"></a>
+            <a href="https://discord.gg/TV6cp2erT5" target="_blank"><img src="../public/svg/discord.svg" alt="Logo de Discord"></a>
+            <a href="https://github.com/VadimElFamoso" target="_blank"><img src="../public/svg/github.svg" alt="Logo de Github"></a>
+            <a href="mailto:contact@vadim2k.dev" target="_blank"><img src="../public/svg/mail.svg" alt="Logo boîte mail"></a>
         </ul>
       </div>
   
@@ -27,43 +27,15 @@
   <script>
   import ProjectCard from '../components/ProjectCard.vue';
 
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  gsap.registerPlugin(ScrollTrigger);
+  const { $gsap } = useNuxtApp()
 
-  // ScrollTrigger.create({
-  //   trigger: '#project_container',
-  //   pin: true,
-  // })
-  
-  export default {
-      name: 'ProjectContainer',
-      components:{
-        ProjectCard
-      },
-      mounted(){
-        this.projectsScrolltrigger();
-      },
-      methods:{
-        projectsScrolltrigger(){
+  onMounted(() => {
+  })
 
-          console.log("scroll");
-
-        ScrollTrigger.create({
-          trigger: '#project_container',
-          start: 'top top',
-          end: 'bottom bottom',
-          markers: true,
-          pin: true,
-          scrub: 1,
-        })
-      }
-    }  
-  } 
   </script>
   
   <style lang="scss">
-  @import '../assets/sass/vars.scss';
+  @import '../public/sass/vars.scss';
   #project_container {
       display: flex;
       height: 100vh;

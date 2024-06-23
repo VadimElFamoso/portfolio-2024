@@ -25,7 +25,7 @@ if (error.value) {
 </script>
 
 <style lang="scss">
-@import '../assets/sass/vars.scss';
+@import '../public/sass/vars.scss';
 
     #blog_container{
         background-color: $primary-color;

@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/sass/vars.scss';
+@import './public/sass/vars.scss';
     .footer{
         background-color: black;
         background-image: url('../public/img/noise.png');

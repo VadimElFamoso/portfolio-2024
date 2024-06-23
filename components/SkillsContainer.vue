@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/sass/vars.scss';
+@import '../public/sass/vars.scss';
 
   .skills_container{
     align-items: center;

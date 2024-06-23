@@ -110,8 +110,7 @@ export default {
 
 <style lang="scss">
 
-@import './assets/sass/mediaqueries.scss';
-@import './assets/sass/vars.scss';
+@import './public/sass/vars.scss';
 @import "https://use.typekit.net/ekn5xco.css";
 
 // @import "./assets/sass/mediaqueries.scss";
