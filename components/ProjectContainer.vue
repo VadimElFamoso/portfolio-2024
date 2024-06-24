@@ -12,7 +12,27 @@
   
       <div class="projects">
         <p class="project_category">Développement web</p>
-        <div class="project_wrapper">
+        <div class="project_wrapper active">
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+        </div>
+
+        <div class="project_wrapper hidden">
+          <p class="project_category">Webdesign</p>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+          <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
+        </div>
+
+        <div class="project_wrapper hidden">
+          <p class="project_category">Audiovisuel</p>
           <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
           <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
           <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
@@ -21,18 +41,55 @@
           <ProjectCard project_title="Super Projet" project_date="Avril 2021" project_category="Développement web" project_image="project.jpg"/>
         </div>
       </div>
-    </div>
+  </div>
   </template>
+
   
-  <script>
-  import ProjectCard from '../components/ProjectCard.vue';
-
-  const { $gsap } = useNuxtApp()
-
-  onMounted(() => {
-  })
-
+  <script setup>
+    import { onMounted } from 'vue';
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  
+    onMounted(() => {
+      gsap.registerPlugin(ScrollTrigger);
+  
+      let scroll = 6000;
+      let categories_title = [
+        'Développement web',
+        'Webdesign',
+        'Graphisme',
+      ];
+  
+      // Calculer le nombre de changements de catégorie
+      const numCategoryChanges = Math.ceil(scroll / 2000);
+  
+      gsap.to('.project_wrapper.active', {
+        scrollTrigger: {
+          trigger: "#project_container",
+          start: 'top top',
+          end: `+=${scroll}`,
+          scrub: 1,
+          pin: true,
+          markers: true,
+          onUpdate: (self) => {
+            // Calculer l'index de la catégorie actuelle
+            const currentIndex = Math.floor(self.progress * numCategoryChanges);
+            // Mettre à jour le texte de la catégorie
+            document.querySelectorAll('p.project_category').forEach((el, index) => {
+              el.textContent = categories_title[currentIndex];
+            });
+          },
+        },
+      });
+    });
   </script>
+  
+
+
+
+
+
+  
   
   <style lang="scss">
   @import '../public/sass/vars.scss';
@@ -88,7 +145,11 @@
           width: 90vw;
         }
 
-        .project_wrapper{
+        .project_wrapper.hidden{
+          display: none;
+        }
+
+        .project_wrapper.active{
           background-color: $fourth-color;
           display: flex;
           flex-wrap: wrap;
@@ -97,7 +158,6 @@
           padding: 25px;
           position: relative;
           width: calc(90vw - 50px);
-
 
             .nav_left{
               background-color: $primary_color;
