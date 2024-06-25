@@ -1,9 +1,16 @@
 - [x] CV_container
-- [] Intégrer CV anglais
-- [] Responsive
-- [] BP ou vw ?
+- [x] Responsive
+- [x] BP ou vw ?
 - [x] Wordpress headless blog
-- [] Styliser module de blog
+- [x] Styliser module de blog
+
+Rapport :
+- [] Bibliographie à rajouter
+- [] Dernière relecture
+
+Site web :
+- [] Loading_container
 - [] Page blog avec post_id
-- [] SVG divider
+- [] Intégrer CV anglais
 - [] Hébergement nouveau domaine
+- [] Rewamp des boutons

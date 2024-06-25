@@ -25,7 +25,7 @@
 
     <a href="#project_container">
     <div id="cta_circle">
-        <img src="./assets/svg/arrow_down.svg" alt="Flèche vers le bas">
+        <img src="./public/svg/arrow_down.svg" alt="Flèche vers le bas">
     </div>
     </a>
   

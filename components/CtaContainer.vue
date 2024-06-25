@@ -18,65 +18,121 @@
 export default {
 
 }
+
+import { onMounted } from 'vue';
+import gsap from 'gsap';
+
+onMounted(() => {
+
+    const scroll = 500;
+
+    gsap.to('.cta_container', {
+    scrollTrigger: {
+        trigger: "#project_container",
+        start: `top top`,
+        end: 'bottom bottom',
+        markers: true,
+        x: 200,
+    },
+
+    });
+});
+
 </script>
 
 <style scoped lang="scss">
 @import '../public/sass/vars.scss';
 
+.cta_container {
+  align-items: center;
+  background-color: $fourth_color;
+  display: flex;
+  flex-direction: column; // Par défaut, en colonne pour les petits écrans
+  height: auto; // Par défaut, auto pour s'ajuster au contenu
+  justify-content: center;
+  padding: 25px;
 
-    .cta_container{
-        align-items: center;
-        background-color: $fourth_color;
-        display: flex;
-        height: 25vh;
-        justify-content: center;
-        padding: 25px 125px;
+  .cta_info {
+    border: 2px solid red;
+    color: $tertiary_color;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 100%; // Prend toute la largeur sur les petits écrans
 
-        .cta_info{
-            border: 2px solid red;
-            color: $tertiary_color;
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-            width: 50%;
-
-            .cta_nav{
-                display: flex;
-                font-family: "gamay", sans-serif;
-                font-size: 1rem;
-                font-weight: 400; 
-                gap: 50px;
-                text-transform: uppercase;
-            }
-
-            p{
-              font-size: 3vw; 
-              font-family: "gamay-expanded", sans-serif;  
-              font-weight: 700;      
-              text-transform: uppercase;    
-            }
-
-            a{
-                color: white;
-            }
-        }
-
-        .cta_img{
-            height: 100%;
-            position: relative;
-            width: 50%;
-
-            img{
-                height: auto;
-                position: relative;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: 100%;
-            }
-        }
+    .cta_nav {
+      display: flex;
+      flex-direction: row; // En colonne sur les petits écrans
+      align-items: center;
+      font-family: "gamay", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      gap: 50px;
+      text-transform: uppercase;
     }
+
+    p {
+      font-size: 3vw; // Plus grand sur les petits écrans
+      font-family: "gamay-expanded", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: left; // Centrer le texte sur les petits écrans
+    }
+
+    a {
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .cta_img {
+    width: 100%; // Prend toute la largeur sur les petits écrans
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; // Ajouter un espace entre l'image et le texte
+
+    img {
+      width: 75%;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .cta_container {
+    flex-direction: row; // En ligne pour les écrans moyens et plus grands
+    height: 25vh;
+    padding: 25px 125px;
+  }
+
+  .cta_info {
+    width: 50%; // Prend 50% de la largeur sur les écrans moyens et plus grands
+
+    .cta_nav {
+      flex-direction: row; // En ligne pour les écrans moyens et plus grands
+      gap: 50px;
+    }
+
+    p {
+      font-size: 3vw; // Ajuster la taille du texte
+      text-align: center; // Alignement à gauche
+    }
+
+    a {
+      text-align: left; // Alignement à gauche
+    }
+  }
+
+  .cta_img {
+    width: 50%; // Prend 50% de la largeur sur les écrans moyens et plus grands
+    margin-top: 0; // Supprimer l'espace ajouté pour les petits écrans
+
+    img {
+      width: 75%; // Ajuster la largeur de l'image
+    }
+  }
+}
+
 
 </style>
