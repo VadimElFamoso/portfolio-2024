@@ -7,7 +7,7 @@
         <span>{{ project_date }}</span>
         <p>{{ project_category }}</p>
       </div>
-      <a href="">En savoir plus.</a>
+      <nuxt-link :to="'/project/' + project_id">En savoir plus</nuxt-link>
     </div>
   </div>
 </template>
@@ -38,8 +38,11 @@ export default {
     project_image: {
       type: String,
       required: true
-    }
     },
+    project_id:[String, Number],
+
+    },
+    
     computed: {
     imageUrl() {
       return `/img/${this.project_image}`;
@@ -108,6 +111,14 @@ export default {
           font-family: "gamay", sans-serif;  
           font-weight: 100;  
         }
+      }
+    }
+
+    @media screen and (max-width: 1024px){
+      .projects
+      .project_card{
+        width: calc(33% - 25px);
+
       }
     }
 </style>
