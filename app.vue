@@ -149,7 +149,7 @@ export default {
   //Loading description :
   .is-typed span.typed {
     color: $primary-color;
-    font-size: 3.5rem;
+    font-size: 3.75vw;
   } 
 
   //Header:
@@ -313,5 +313,35 @@ export default {
       0% {transform: translate(-50%, -50%) translateY(-5px);}
       50% {transform: translate(-50%, -50%) translateY(5px);}
       100% {transform: translate(-50%, -50%) translateY(-5px);}
+    }
+
+    @media screen and (max-width: 768px){
+      .navbar ul{
+        align-items: normal !important;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #header .title{
+
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .header_wrapper img{
+        display: none;
+      }
+
+      #cta_circle{
+        height: 50px !important;
+        width: 50px !important;
+      }
+
+      .background_text{
+        font-size: 1.25rem !important;
+      }
     }
 </style>

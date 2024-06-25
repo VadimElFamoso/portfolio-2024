@@ -69,7 +69,7 @@ if (error.value) {
     width: 100%; // Le premier article occupe toute la largeur
 
     img {
-      width: 75%;
+      width: 50%;
     }
 
     h3.article_title{
