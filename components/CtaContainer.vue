@@ -3,9 +3,9 @@
     <div class="cta_info">
         <p>Une idée, un projet ? Contactez CodeCorp.</p>
         <div class="cta_nav">
-            <a href="">Mail.</a>
-            <a href="">Tel.</a>
-            <a href="">Créer un devis.</a>
+            <a href="mailto:khenfer3u@gmail.com">Mail.</a>
+            <a href="tel:0329543292">Tel.</a>
+            <a href="https://discord.gg/n2tVWAn3XM" target="_blank">Discord.</a>
         </div>
     </div>
     <div class="cta_img">
@@ -96,6 +96,12 @@ onMounted(() => {
       width: 75%;
       height: auto;
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta_container .cta_info p{
+      font-size: 3vw; // Ajuster la taille du texte
   }
 }
 

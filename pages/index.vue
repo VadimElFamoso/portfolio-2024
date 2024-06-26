@@ -6,11 +6,11 @@
   <div class="container" id="header">
     <div class="navbar">
       <ul>
-        <li><a href="#skills">.skills()</a></li>
-        <li><a href="#projects">.projects()</a></li>
+        <li><a href="#skills_container">.skills()</a></li>
+        <li><a href="#project_container">.projects()</a></li>
         <li><a href="#header" id="title">Vadim2k.dev</a></li>
-        <li><a href="#blog">.blog()</a></li>
-        <li><a href="#contact">.contact()</a></li>
+        <li><a href="#blog_container">.blog()</a></li>
+        <li><a href="#contact_container">.contact()</a></li>
       </ul>
     </div>
 
@@ -20,12 +20,12 @@
         <VueWriter :array="['Développeur web passionné.']" />
       </div>
 
-      <img src="./public/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
+      <img src="../public/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
     </div>
 
     <a href="#project_container">
     <div id="cta_circle">
-        <img src="./public/svg/arrow_down.svg" alt="Flèche vers le bas">
+        <img src="../public/svg/arrow_down.svg" alt="Flèche vers le bas">
     </div>
     </a>
   
@@ -42,11 +42,11 @@
 </template>
 
 <script>
-import ProjectContainer from './components/ProjectContainer.vue'
-import CtaContainer from './components/CtaContainer.vue'
-import SkillsContainer from './components/SkillsContainer.vue'
-import BlogContainer from './components/BlogContainer.vue'
-import Footer from './components/Footer.vue'
+import ProjectContainer from '../components/ProjectContainer.vue'
+import CtaContainer from '../components/CtaContainer.vue'
+import SkillsContainer from '../components/SkillsContainer.vue'
+import BlogContainer from '../components/BlogContainer.vue'
+import Footer from '../components/Footer.vue'
 
 import {VueWriter} from 'vue-writer'
 
@@ -155,7 +155,7 @@ export default {
   //Header:
   #header{
     background-color: black;
-    background-image: url('./public/img/noise.png');
+    background-image: url('../public/img/noise.png');
     border-bottom: 1.2vh solid $primary-color;
     height: calc(100vh - 1.2vh); //100vh - border_bottom
     padding: 0 $init_padding;

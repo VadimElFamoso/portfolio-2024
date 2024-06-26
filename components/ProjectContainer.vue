@@ -283,7 +283,7 @@ onMounted(() => {
       ul {
         flex-direction: row;
         justify-content: center;
-        gap: 50px;
+        gap: 75px;
       }
     }
 

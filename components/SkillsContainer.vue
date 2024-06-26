@@ -1,5 +1,5 @@
 <template>
-  <div class="skills_container">
+  <div id="skills_container">
     <div class="text_container">
       <div class="text active">
         <p>Développeur</p>
@@ -41,7 +41,7 @@ export default {
 <style lang="scss">
 @import '../public/sass/vars.scss';
 
-  .skills_container{
+  #skills_container{
     align-items: center;
     background-color: $primary-color;
     display: flex;

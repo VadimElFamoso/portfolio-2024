@@ -8,8 +8,8 @@
         <div class="article_text">
           <h3 class="article_title">{{ post.acf.article_title }}</h3>
           <p class="article_description">{{ post.acf.article_description }}</p>
-          <p class="article_category">{{ post.acf.article_categories }}</p>
-          <p class="article_date">Rédigé par {{ post.acf.article_author }} - {{ post.acf.article_date }}</p>
+          <p class="article_author_date">Rédigé par {{ post.acf.article_author }} - {{ post.acf.article_date }}</p>
+          <nuxt-link class="article_button" :to="{ name: 'articles-id', params: { id: post.id } }">Lire l'article.</nuxt-link>
         </div>
       </div>
     </div>
@@ -51,7 +51,6 @@ if (error.value) {
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  border: 3px solid orange;
 }
 
 .article {
@@ -60,11 +59,9 @@ if (error.value) {
   align-items: center;
   gap: 25px;
   width: 100%; // Par défaut, les articles prennent toute la largeur
-  border: 3px solid red;
   font-family: 'Gamay editorial', sans-serif;
 
   &:nth-child(1) {
-    border: 3px solid yellow;
     justify-content: center;
     width: 100%; // Le premier article occupe toute la largeur
 
@@ -80,6 +77,7 @@ if (error.value) {
     p.article_description {
     font-size: 2vw;
     }
+    
 
     p.article_category {
       font-size: 1vw;
@@ -102,6 +100,16 @@ if (error.value) {
 
   p.article_category {
     font-size: 1.5rem;
+  }
+
+  p.article_author_date{
+    opacity: 0.4;
+    font-size: 1rem;
+  }
+
+  .article_button{
+    font-size: 1.25vw;
+    text-decoration: underline;
   }
 }
 
