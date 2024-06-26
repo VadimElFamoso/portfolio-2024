@@ -84,7 +84,7 @@ export default {
     width: 100%;
 
     img {
-      height: 350px;
+      height: 375px;
       object-fit: cover;
       width: 100%;
     }
@@ -176,12 +176,49 @@ export default {
   }
 }
 
+@media (max-width: 768px) {
+  .project_card {
+    width: calc(50% - 25px);
+
+    .image-container img {
+      height: 200px !important;
+    }
+  }
+
+  .project_info_wrapper{
+    h2{
+      text-decoration: underline;
+      font-size: 1.2rem;
+    }
+    span{
+      font-size: 0.7rem;
+    }
+    p{
+      font-size: 0.7rem;
+    }
+  }
+
+  .project_info a{
+    font-size: 0.75rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .project_card {
     width: calc(50% - 25px);
 
     .image-container img {
-      width: 100%;
+      height: 125px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .project_card {
+    width: calc(50% - 25px);
+
+    .image-container img {
+      height: 150px;
     }
   }
 }

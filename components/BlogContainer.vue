@@ -108,6 +108,7 @@ if (error.value) {
   }
 
   .article_button{
+    color: $secondary-color;
     font-size: 1.25vw;
     text-decoration: underline;
   }

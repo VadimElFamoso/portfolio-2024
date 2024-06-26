@@ -138,7 +138,6 @@ export default {
   }
 
   p {
-    border: 2px solid red;
     font-size: 4vw;
     font-weight: 700;
     display: block;
@@ -149,7 +148,6 @@ export default {
   }
 
   .cv_container {
-    border: 2px solid red;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;

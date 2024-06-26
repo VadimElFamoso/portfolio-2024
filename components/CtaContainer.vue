@@ -53,7 +53,6 @@ onMounted(() => {
   padding: 25px;
 
   .cta_info {
-    border: 2px solid red;
     color: $tertiary_color;
     display: flex;
     flex-direction: column;

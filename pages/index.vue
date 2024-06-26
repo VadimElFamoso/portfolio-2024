@@ -17,7 +17,7 @@
     <div class="header_wrapper">
       <div class="title">
         <h1>Vadim Khenfer</h1>
-        <VueWriter :array="['Développeur web passionné.']" />
+        <VueWriter :array="subtitles" :typeSpeed="70" :eraseSpeed="50" />
       </div>
 
       <img src="../public/img/vadim_header.png" alt="Image de Khenfer Vadim détourée">
@@ -59,6 +59,19 @@ export default {
     BlogContainer,
     Footer,
     VueWriter
+  },
+  data(){
+    return {
+      subtitles: [
+        "Développeur web passionné.", 
+        "Développeur Java Bukkit !",
+        "Fan incontesté de Vuejs <3",
+        "Papa de Ryuk le Maincoon :D",
+        "Gérant de CodeCorp.",
+        "Ancien féru d'Arduino...",
+        "H4ck the pl4n€t!",
+      ]
+    }
   },
   mounted() {
     this.animateTitle();
@@ -221,7 +234,7 @@ export default {
       position: absolute;
       right: 5%;
       bottom: 0;
-      width: 40%; 
+      width: 37.5%; 
 
     }
 
