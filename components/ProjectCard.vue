@@ -1,6 +1,16 @@
 <template>
   <div class="project_card">
-    <img :src="imageUrl" alt="">
+    <div class="image-container">
+      <img :src="imageUrl" alt="">
+      <div v-if="showModal" class="modal">
+        <div class="modal-content">
+          <span class="close" @click="closeModal">&times;</span>
+          <h2>{{ project_title }}</h2>
+          <p>{{ project_description }}</p>
+          <!-- Ajoutez plus de contenu ici -->
+        </div>
+      </div>
+    </div>
     <div class="project_info">
       <div class="project_info_wrapper">
         <h2>{{ project_title }}</h2>
@@ -9,29 +19,18 @@
       </div>
       <a href="#" @click.prevent="openModal">En savoir plus.</a>
     </div>
-    
-    <div v-if="showModal" class="modal">
-      <div class="modal-content">
-        <span class="close" @click="closeModal">&times;</span>
-        <h2>{{ project_title }}</h2>
-        <p>Voici plus d'informations sur le projet...</p>
-        <!-- Ajoutez plus de contenu ici -->
-      </div>
-    </div>
   </div>
 </template>
 
-
 <script>
-async function resolveImage(name) {
-  const module = await import(`~/assets/img/${name}`);
-  return module.default;
-}
-
 export default {
   name: 'ProjectCard',
   props: {
     project_title: {
+      type: String,
+      required: true
+    },
+    project_description: {
       type: String,
       required: true
     },
@@ -69,23 +68,69 @@ export default {
     }
   }
 };
-
-
-
 </script>
 
 <style lang="scss">
 @import '../public/sass/vars.scss';
 
 .project_card {
-  display: flex;     
+  display: flex;
   flex-direction: column;
   height: fit-content;
   width: calc(30% - 25px);
 
-  img {
-    height: auto;
+  .image-container {
+    position: relative;
     width: 100%;
+
+    img {
+      height: 350px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .modal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+
+      .modal-content {
+        background-color: $primary-color;
+        padding: 20px;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 600px;
+        position: relative;
+
+        h2 {
+          font-family: 'Gamay-wide', sans-serif;
+          font-size: 1vw;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-family: 'Gamay Editorial';
+          font-size: 0.75vw;
+          color: $secondary-color;
+        }
+
+        .close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 24px;
+          cursor: pointer;
+          color: $secondary-color;
+        }
+      }
+    }
   }
 
   .project_info {
@@ -97,8 +142,8 @@ export default {
 
     a {
       color: $primary_color;
-      font-family: "gamay-expanded", sans-serif;  
-      font-weight: 700;    
+      font-family: "gamay-expanded", sans-serif;
+      font-weight: 700;
       text-align: center;
       text-decoration: underline;
       width: 35%;
@@ -112,51 +157,21 @@ export default {
     }
 
     h2 {
-      font-family: "gamay-expanded", sans-serif;  
-      font-weight: 700;    
+      font-family: "gamay-expanded", sans-serif;
+      font-weight: 700;
       width: inherit;
     }
 
     span {
-      font-family: "gamay-wide", sans-serif; 
-      letter-spacing: 10px; 
-      font-weight: 100;  
-      font-style: italic;  
+      font-family: "gamay-wide", sans-serif;
+      letter-spacing: 10px;
+      font-weight: 100;
+      font-style: italic;
     }
 
     p {
-      font-family: "gamay", sans-serif;  
-      font-weight: 100;  
-    }
-  }
-
-  .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-
-    .modal-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      width: 80%;
-      max-width: 600px;
-      position: relative;
-
-      .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        cursor: pointer;
-      }
+      font-family: "gamay", sans-serif;
+      font-weight: 100;
     }
   }
 }
@@ -165,7 +180,7 @@ export default {
   .project_card {
     width: calc(50% - 25px);
 
-    img {
+    .image-container img {
       width: 100%;
     }
   }
