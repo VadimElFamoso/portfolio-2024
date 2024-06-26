@@ -5,12 +5,12 @@
 - [x] Styliser module de blog
 
 Rapport :
-- [] Bibliographie à rajouter
-- [] Dernière relecture
+- [x] Bibliographie à rajouter
+- [x] Dernière relecture
 
 Site web :
 - [] Loading_container
-- [] Page blog avec post_id
+- [x] Page blog avec post_id
 - [] Intégrer CV anglais
 - [] Hébergement nouveau domaine
 - [] Rewamp des boutons
