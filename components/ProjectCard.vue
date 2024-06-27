@@ -84,7 +84,7 @@ export default {
     width: 100%;
 
     img {
-      height: 375px;
+      height: 250px;
       object-fit: cover;
       width: 100%;
     }
