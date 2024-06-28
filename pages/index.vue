@@ -234,7 +234,7 @@ export default {
       position: absolute;
       right: 5%;
       bottom: 0;
-      width: 37.5%; 
+      width: 27.5%; 
 
     }
 
