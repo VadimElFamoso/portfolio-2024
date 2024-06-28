@@ -70,13 +70,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import '../public/sass/vars.scss';
 
 .project_card {
   display: flex;
   flex-direction: column;
   height: fit-content;
+  opacity: 0;
   width: calc(30% - 25px);
 
   .image-container {

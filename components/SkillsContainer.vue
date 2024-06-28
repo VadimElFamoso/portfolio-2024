@@ -32,17 +32,17 @@ export default {
         {
           text: "<h2>Développeur super</h2><p>Fullstack</p><p>VueJS Nuxt</p>",
           presentation: "<p>Pour des applications web performantes et exigeantes.</p>",
-          image: "../public/img/canyon.jpg"
+          image: "/img/canyon.jpg"
         },
         {
           text: "<h2>Designer créatif</h2><p>UX/UI</p><p>Figma Sketch</p>",
           presentation: "<p>Création de designs intuitifs et esthétiques.</p>",
-          image: "./public/img/sunflower.jpg"
+          image: "/img/sunflower.jpg"
         },
         {
           text: "<h2>Gestion de projet</h2><p>Agile Scrum</p><p>Leadership</p>",
           presentation: "<p>Conduite de projets avec des méthodes agiles.</p>",
-          image: "../public/img/lake.jpg"
+          image: "/img/lake.jpg"
         }
       ]
     };

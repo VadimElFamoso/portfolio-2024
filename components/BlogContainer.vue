@@ -30,7 +30,7 @@ if (error.value) {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import '../public/sass/vars.scss';
 
 #blog_container {

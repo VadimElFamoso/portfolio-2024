@@ -126,7 +126,7 @@ onMounted(() => {
 });
 </script>
   
-<style lang="scss">
+<style scoped lang="scss">
 @import '../public/sass/vars.scss';
 
 #project_container {
@@ -184,7 +184,7 @@ onMounted(() => {
       background-color: $fourth-color;
       color: $tertiary_color;
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
       width: 100%;
 
       p {
@@ -194,7 +194,7 @@ onMounted(() => {
         text-align: center;
         text-transform: uppercase;
         text-wrap: nowrap;
-        opacity: 0.05;
+        opacity: 0.1;
       }
     }
 
