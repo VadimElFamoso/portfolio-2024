@@ -10,7 +10,7 @@
         <li><a href="#project_container">.projects()</a></li>
         <li><a href="#header" id="title">Vadim2k.dev</a></li>
         <li><a href="#blog_container">.blog()</a></li>
-        <li><a href="#contact_container">.contact()</a></li>
+        <li><a href="#cta_container">.contact()</a></li>
       </ul>
     </div>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="cta_container">
+  <div id="cta_container">
     <div class="cta_info">
         <p>Une idée, un projet ? Contactez CodeCorp.</p>
         <div class="cta_nav">
@@ -43,7 +43,7 @@ onMounted(() => {
 <style scoped lang="scss">
 @import '../public/sass/vars.scss';
 
-.cta_container {
+#cta_container {
   align-items: center;
   background-color: $fourth_color;
   display: flex;
@@ -99,13 +99,13 @@ onMounted(() => {
 }
 
 @media (min-width: 1024px) {
-  .cta_container .cta_info p{
+  #cta_container .cta_info p{
       font-size: 3vw; // Ajuster la taille du texte
   }
 }
 
 @media (min-width: 768px) {
-  .cta_container {
+  #cta_container {
     flex-direction: row; // En ligne pour les écrans moyens et plus grands
     height: 25vh;
     padding: 25px 125px;
