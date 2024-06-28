@@ -54,7 +54,6 @@ h1{
   display: block;
   font-size: 4vw;
   margin: auto;
-  text-align: center;
   text-transform: uppercase;
   padding: 25px 0;
   width: 80%;

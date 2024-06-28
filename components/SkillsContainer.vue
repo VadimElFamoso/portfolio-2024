@@ -17,8 +17,8 @@
   <div class="cta_cv">
     <p>Vous voulez en savoir plus ?</p>
     <div class="cv_container">
-      <a href="../public/pdf/cv_khenfer_vadim.pdf">Télécharger mon cv</a>
-      <a href="../public/pdf/resume_khenfer_vadim.pdf">Download my resume</a>
+      <a href="/pdf/CV_Vadim_français.pdf" download>Télécharger mon cv</a>
+      <a href="/pdf/CV_Vadim_anglais.pdf" download>Download my resume</a>
     </div>
   </div>
 </template>
