@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <div class="resume_container">
+    <div class="img_container">
       <img :src="items[currentIndex].image" alt="">
     </div>
   </div>
@@ -17,7 +17,7 @@
   <div class="cta_cv">
     <p>Vous voulez en savoir plus ?</p>
     <div class="cv_container">
-      <a href="/pdf/CV_Vadim_français.pdf" download>Télécharger mon cv</a>
+      <a href="/pdf/CV_Vadim_français.pdf" download>Télécharger mon cv 	&#x1F1EB;&#x1F1F7;</a>
       <a href="/pdf/CV_Vadim_anglais.pdf" download>Download my resume</a>
     </div>
   </div>
@@ -30,7 +30,7 @@ export default {
       currentIndex: 0,
       items: [
         {
-          text: "<h2>Développeur super</h2><p>Fullstack</p><p>VueJS Nuxt</p>",
+          text: "<h2>Développeur</h2><p>Fullstack</p><p>VueJS Nuxt</p>",
           presentation: "<p>Pour des applications web performantes et exigeantes.</p>",
           image: "/img/canyon.jpg"
         },
@@ -71,26 +71,33 @@ export default {
 @import '../public/sass/vars.scss';
 
 #skills_container {
+  border: 4px solid red;
   align-items: center;
   background-color: $primary-color;
   display: flex;
   font-family: 'gamay-wide', sans-serif;
   font-size: 6rem;
   font-weight: 700;
+  gap: 50px;
   height: 100vh;
   padding: 50px 50px;
   text-transform: uppercase;
 
   .text_container {
+    border: 4px solid red;
     width: 50%;
 
     .text.active {
       display: block;
     }
 
+    h2{
+      font-size: 4vw;
+    }
+
     p {
       display: block;
-      font-size: 4vw;
+      font-size: 3vw;
     }
 
     .text {
@@ -111,14 +118,13 @@ export default {
     }
   }
 
-  .resume_container {
-    background-color: black;
-    height: 100%;
+  .img_container{
     width: 50%;
-    padding: 0;
-
+    height: 100%;
     img {
+      border: 4px solid red;
       height: 100%;
+      object-fit: cover;
       width: 100%;
     }
   }
@@ -168,6 +174,12 @@ export default {
       text-decoration: none;
       width: 30%;
     }
+  }
+}
+
+@media screen and (max-width: 768px){
+  #skills_container{
+    flex-direction: column;
   }
 }
 </style>

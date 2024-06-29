@@ -48,9 +48,10 @@ if (error.value) {
 
 .articles {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 75px;
+  justify-content: center;
+  padding: 50px 0;
 }
 
 .article {
@@ -58,7 +59,7 @@ if (error.value) {
   flex-direction: row;
   align-items: center;
   gap: 25px;
-  width: 100%; // Par défaut, les articles prennent toute la largeur
+  width: 48%; // Par défaut, les articles prennent toute la largeur
   font-family: 'Gamay editorial', sans-serif;
 
   &:nth-child(1) {
@@ -114,13 +115,17 @@ if (error.value) {
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .article:nth-child(1) .article_text {
+    width: 100%; // Le premier article reste à 100% sur les grands écrans
+  }
+
   .article {
     width: 100%; // À partir de 768px, les articles prennent 48% de la largeur
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .article {
     width: 48%; // À partir de 1024px, les articles prennent 48% de la largeur
   }
