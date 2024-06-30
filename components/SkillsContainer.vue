@@ -71,7 +71,6 @@ export default {
 @import '../public/sass/vars.scss';
 
 #skills_container {
-  border: 4px solid red;
   align-items: center;
   background-color: $primary-color;
   display: flex;
@@ -84,7 +83,6 @@ export default {
   text-transform: uppercase;
 
   .text_container {
-    border: 4px solid red;
     width: 50%;
 
     .text.active {
@@ -122,7 +120,6 @@ export default {
     width: 50%;
     height: 100%;
     img {
-      border: 4px solid red;
       height: 100%;
       object-fit: cover;
       width: 100%;

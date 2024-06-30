@@ -59,7 +59,7 @@ if (error.value) {
   flex-direction: row;
   align-items: center;
   gap: 25px;
-  width: 48%; // Par défaut, les articles prennent toute la largeur
+  width: 45%; // Par défaut, les articles prennent toute la largeur
   font-family: 'Gamay editorial', sans-serif;
 
   &:nth-child(1) {
