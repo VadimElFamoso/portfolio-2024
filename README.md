@@ -9,8 +9,8 @@ Rapport :
 - [x] Dernière relecture
 
 Site web :
-- [] Loading_container
+- [x] Loading_container
 - [x] Page blog avec post_id
-- [] Intégrer CV anglais
-- [] Hébergement nouveau domaine
-- [] Rewamp des boutons
+- [x] Intégrer CV anglais
+- [x] Hébergement nouveau domaine
+- [x] Rewamp des boutons
