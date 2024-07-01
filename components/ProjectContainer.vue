@@ -184,7 +184,7 @@ onMounted(() => {
       background-color: $fourth-color;
       color: $tertiary_color;
       position: absolute;
-      bottom: 10px;
+      bottom: 15px;
       width: 100%;
 
       p {

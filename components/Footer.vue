@@ -8,11 +8,11 @@
           </div>
           <div class="nav_container">
             <a href="#skills_container">.skills()</a>
-            <a href="#projects_container">.projects()</a>
+            <a href="#project_container">.projects()</a>
             <a href="#blog_container">.blog()</a>
-            <a href="#contact_container">.contact()</a>
+            <a href="#cta_container">.contact()</a>
             <a href="mentions_legales.html">Mentions légales</a>
-            <a href="">Portfolio de Loulou &#10084;</a>
+            <a href="https://www.allenbach.but22.iutn.o2switch.site/" target="_blank">Portfolio de Loulou &#10084;</a>
           </div>
           <div class="copyright_container">
             <p>Khenfer Vadim - 2024©</p>

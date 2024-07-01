@@ -15,10 +15,10 @@
   </div>
 
   <div class="cta_cv">
-    <p>Vous voulez en savoir plus ?</p>
+    <VueWriter :array="subtitles" :typeSpeed="70" :eraseSpeed="50" />
     <div class="cv_container">
-      <a href="/pdf/CV_Vadim_français.pdf" download>Télécharger mon cv 	&#x1F1EB;&#x1F1F7;</a>
-      <a href="/pdf/CV_Vadim_anglais.pdf" download>Download my resume</a>
+      <a href="/pdf/CV_Vadim_français.pdf" download>Télécharger mon cv <img src="/img/french_flag.png" alt=""></a>
+      <a href="/pdf/CV_Vadim_anglais.pdf" download>Download my resume <img src="/img/english_flag.png" alt=""></a>
     </div>
   </div>
 </template>
@@ -44,6 +44,10 @@ export default {
           presentation: "<p>Conduite de projets avec des méthodes agiles.</p>",
           image: "/img/lake.jpg"
         }
+      ],
+      subtitles: [
+        "Vous voulez en savoir plus ?",
+        "Want to know more ?"
       ]
     };
   },
@@ -136,6 +140,11 @@ export default {
   padding: 100px 0;
   text-align: center;
 
+  .is-typed span.typed {
+    color: $secondary-color;
+    font-size: 3.75vw;
+  } 
+
   &::before {
     content: url("../public/devider.svg");
   }
@@ -158,18 +167,25 @@ export default {
     width: 50%;
 
     a {
+      align-items: center;
       background-color: $fourth-color;
       border: none;
       border-radius: 50px;
       color: $tertiary-color;
-      display: block;
+      display: flex;
       font-size: 1.5vw;
       font-family: 'gamay';
       font-weight: 100;
+      gap: 15px;
       margin: auto;
       padding: 25px 25px;
       text-decoration: none;
-      width: 30%;
+      width: auto;
+
+      img{
+        height: 40px;
+        width: auto;
+      }
     }
   }
 }

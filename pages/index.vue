@@ -232,9 +232,9 @@ export default {
     img{
       height: auto;
       position: absolute;
-      right: 5%;
+      right: 10%;
       bottom: 0;
-      width: 27.5%; 
+      width: 30%; 
 
     }
 
